@@ -1,0 +1,28 @@
+{
+	"id": "e8042d30-7426-4f60-a9ce-929ae2e8dca7",
+	"name": "env_intensso",
+	"values": [
+		{
+			"key": "base_url",
+			"value": "https://efwjeeudmaijarkoadqv.supabase.co/rest/v1/bookings",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "raw_id",
+			"value": 42,
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "name_edit",
+			"value": "\"Example\"",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"color": null,
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-12-18T20:05:32.172Z",
+	"_postman_exported_using": "Postman/11.76.8"
+}

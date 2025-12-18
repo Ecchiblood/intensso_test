@@ -1,0 +1,1332 @@
+{
+	"info": {
+		"_postman_id": "6f65a902-1125-473e-ab23-2906c9c4b998",
+		"name": "Intensso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41250735"
+	},
+	"item": [
+		{
+			"name": "Get Booking Lists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Проверка статус кода и содержимого ответа на соответствие ожиданиям.\r",
+							"pm.test(\"Ответ от сервера 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Проверка времени ответа (от 10 до 2000 мс)\r",
+							"pm.test(\"Время ответа в диапазоне 10-2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.within(10, 2000);\r",
+							"    });\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "return",
+						"value": "representation",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Booking Lists",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "return",
+								"value": "representation",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}",
+							"host": [
+								"{{base_url}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 18 Dec 2025 20:05:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Content-Range",
+							"value": "0-47/*"
+						},
+						{
+							"key": "CF-Ray",
+							"value": "9b014710aa8418bf-FRA"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Location",
+							"value": "/bookings"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "content-profile",
+							"value": "public"
+						},
+						{
+							"key": "sb-gateway-version",
+							"value": "1"
+						},
+						{
+							"key": "sb-project-ref",
+							"value": "efwjeeudmaijarkoadqv"
+						},
+						{
+							"key": "sb-request-id",
+							"value": "019b3311-a672-7e04-a069-d7039aea9846"
+						},
+						{
+							"key": "x-envoy-attempt-count",
+							"value": "1"
+						},
+						{
+							"key": "x-envoy-upstream-service-time",
+							"value": "47"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "__cf_bm=I8olwjvUleFbxtw27M9L2ziMHc4kqAttBrKZ7dqoqHg-1766088353-1.0.1.1-6ip37Rg8.AP44JM0I2y8VTFiOoHSe0ZwBQ2pZMd2.rzS0flarnHvsJysBVkGIbtkFI7ZlSeg.yduljbV45UUwhs6HUKFS52.xSfwEf9Od9s; path=/; expires=Thu, 18-Dec-25 20:35:53 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"created_at\": \"2025-12-09T20:34:58.969271+00:00\",\n        \"name\": \"Ecchiblood\",\n        \"phone\": \"+7 903 465 24 69\",\n        \"email\": \"vanjasghost07@gmail.com\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 2,\n        \"created_at\": \"2025-12-09T20:37:25.94103+00:00\",\n        \"name\": \"Дарина\",\n        \"phone\": \"+79182129162\",\n        \"email\": \"vanjasghost07@gmail.com\",\n        \"guests\": 2,\n        \"date\": \"2025-12-12\",\n        \"time\": \"19:00:00\",\n        \"table_type\": \"window\",\n        \"special_requests\": \"\",\n        \"newsletter\": true,\n        \"status\": null\n    },\n    {\n        \"id\": 3,\n        \"created_at\": \"2025-12-09T20:55:03.302141+00:00\",\n        \"name\": \"Хуесос\",\n        \"phone\": \"+7 986 123 45 67\",\n        \"email\": \"0Tcocu.5cm.churka@gmail.com\",\n        \"guests\": 10,\n        \"date\": \"2025-12-25\",\n        \"time\": \"13:33:00\",\n        \"table_type\": \"vip\",\n        \"special_requests\": \"аллергия на понос, прошу по-больше сыра\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 4,\n        \"created_at\": \"2025-12-10T15:00:58.226077+00:00\",\n        \"name\": \"Даун\",\n        \"phone\": \"+7 903 465 24 69\",\n        \"email\": \"leuil.666@gmail.com\",\n        \"guests\": 2,\n        \"date\": \"2025-12-25\",\n        \"time\": \"22:11:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 5,\n        \"created_at\": \"2025-12-10T15:45:33.810403+00:00\",\n        \"name\": \"далбаеб\",\n        \"phone\": \"+79627685369\",\n        \"email\": \"vanjasghost07@gmail.com\",\n        \"guests\": 2,\n        \"date\": \"2025-12-22\",\n        \"time\": \"15:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": null,\n        \"newsletter\": false,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 6,\n        \"created_at\": \"2025-12-10T15:51:57.894839+00:00\",\n        \"name\": \"Далбаеб2\",\n        \"phone\": \"+7 903 465 24 69\",\n        \"email\": \"vanjasghost07@gmail.com\",\n        \"guests\": 10,\n        \"date\": \"2025-12-20\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": null,\n        \"newsletter\": false,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 7,\n        \"created_at\": \"2025-12-10T16:42:47.283+00:00\",\n        \"name\": \"postman\",\n        \"phone\": \"+7 903 465 24 69\",\n        \"email\": \"vanjasghost07@gmail.com\",\n        \"guests\": 2,\n        \"date\": \"2025-12-20\",\n        \"time\": \"13:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"111\",\n        \"newsletter\": false,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 8,\n        \"created_at\": \"2025-12-11T14:52:58.771+00:00\",\n        \"name\": \"фывфв\",\n        \"phone\": \"+7 903 465 24 69\",\n        \"email\": \"vanjasghost07@gmail.com\",\n        \"guests\": 2,\n        \"date\": \"2025-12-22\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": null,\n        \"newsletter\": false,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 9,\n        \"created_at\": \"2025-12-13T19:31:46.828+00:00\",\n        \"name\": \"Гандон\",\n        \"phone\": \"+7 903 465 24 69\",\n        \"email\": \"vanjasghost07@gmail.com\",\n        \"guests\": 2,\n        \"date\": \"2025-12-14\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": null,\n        \"newsletter\": false,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 10,\n        \"created_at\": \"2025-12-16T19:21:29.814+00:00\",\n        \"name\": \"Ecchiblood\",\n        \"phone\": \"+7 903 465 24 69\",\n        \"email\": \"vanjasghost07@gmail.com\",\n        \"guests\": 9,\n        \"date\": \"2025-12-29\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"vip\",\n        \"special_requests\": \"awsdasd\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 11,\n        \"created_at\": \"2025-12-16T19:31:33.867+00:00\",\n        \"name\": \"Аникита\",\n        \"phone\": \"+79335377963\",\n        \"email\": \"fedosi_48@example.org\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Низкий низкий возбуждение манера деньги. Белье вздрогнуть наслаждение господь.\\nЗаявление граница горький ночь. Пространство человечек мера второй указанный. Что академик команда факультет новый.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 12,\n        \"created_at\": \"2025-12-16T19:35:05.107+00:00\",\n        \"name\": \"Софрон\",\n        \"phone\": \"+79106617756\",\n        \"email\": \"marfa53@example.net\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Разнообразный степь правление одиннадцать смелый. Сбросить кпсс выражение мгновение желание ломать порядок. Развитый свежий команда о носок даль.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 13,\n        \"created_at\": \"2025-12-16T19:45:16.049+00:00\",\n        \"name\": \"Эммануил\",\n        \"phone\": \"+79538336818\",\n        \"email\": \"nikifor_68@example.net\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Цель зачем сопровождаться приятель. Покидать выражение заплакать пропасть.\\nПрирода коллектив академик школьный изредка кидать.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 14,\n        \"created_at\": \"2025-12-16T20:20:33.501+00:00\",\n        \"name\": \"Олимпий\",\n        \"phone\": \"+79385669987\",\n        \"email\": \"juri_1986@example.org\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Пропаганда песенка поезд недостаток зарплата. Домашний белье казнь сопровождаться. Нажать бровь теория тяжелый грудь понятный.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 15,\n        \"created_at\": \"2025-12-16T20:21:55.942+00:00\",\n        \"name\": \"Поликарп\",\n        \"phone\": \"+79338407703\",\n        \"email\": \"frol_48@example.org\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Приличный кидать посвятить. Правление адвокат предоставить.\\nПропаганда единый заведение. Трясти сходить боец провинция нажать забирать.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 16,\n        \"created_at\": \"2025-12-16T20:25:11.5+00:00\",\n        \"name\": \"Аполлон\",\n        \"phone\": \"+79615798152\",\n        \"email\": \"sidorovasofija@example.com\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Зато пропасть близко пространство сомнительный развернуться тревога. Носок ломать счастье исполнять один отъезд.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 17,\n        \"created_at\": \"2025-12-16T20:30:26.651+00:00\",\n        \"name\": \"Нифонт\",\n        \"phone\": \"+79707032052\",\n        \"email\": \"emil_1984@example.org\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Июнь лиловый бровь неожиданный смертельный белье рабочий. Сверкать холодно холодно поймать отметить помимо второй. Посидеть миллиард ведь мера рис металл.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 18,\n        \"created_at\": \"2025-12-16T20:42:31.474+00:00\",\n        \"name\": \"Гремислав\",\n        \"phone\": \"+79943611947\",\n        \"email\": \"bespalovaevpraksija@example.net\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Миллиард оборот секунда страсть рабочий. Неправда прежний цвет протягивать покидать дьявол. Аж одиннадцать школьный наступать покидать дьявол недостаток. Зато теория металл рабочий затянуться.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 19,\n        \"created_at\": \"2025-12-16T20:46:06.679+00:00\",\n        \"name\": \"Фрол\",\n        \"phone\": \"+79190471589\",\n        \"email\": \"juri2010@example.net\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Сынок необычный через услать выражение сверкающий. Число падаль угодный инфекция холодно. Горький подробность увеличиваться некоторый разводить секунда прошептать.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 20,\n        \"created_at\": \"2025-12-16T21:38:22.784+00:00\",\n        \"name\": \"Валерьян\",\n        \"phone\": \"+79944862409\",\n        \"email\": \"uvarovuljan@example.net\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Поймать близко расстройство способ зато бровь. Валюта премьера гулять.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 21,\n        \"created_at\": \"2025-12-16T21:47:29.608+00:00\",\n        \"name\": \"Валентин\",\n        \"phone\": \"+79806253040\",\n        \"email\": \"tgerasimov@example.net\",\n        \"guests\": 3,\n        \"date\": \"2025-12-31\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"Житель печатать а заявление материя бровь заявление угодный. Неожиданно вздрогнуть дрогнуть еврейский бок.\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 22,\n        \"created_at\": \"2025-12-16T21:50:10.614+00:00\",\n        \"name\": \"?Андрей?\",\n        \"phone\": \"+70203030564\",\n        \"email\": \"1@1.xn--j1aef\",\n        \"guests\": 3,\n        \"date\": \"2026-02-08\",\n        \"time\": \"14:11:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": null,\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 23,\n        \"created_at\": \"2025-12-16T21:50:57.975+00:00\",\n        \"name\": \"Поле не ограниченооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооо\",\n        \"phone\": \"+79999999999\",\n        \"email\": \"u@u.com\",\n        \"guests\": 3,\n        \"date\": \"2026-03-16\",\n        \"time\": \"22:59:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": null,\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 24,\n        \"created_at\": \"2025-12-18T16:15:02.705+00:00\",\n        \"name\": \"vanjasghost07@gmail.com\",\n        \"phone\": \"+7 903 465 24 69\",\n        \"email\": \"vanjasghost07@gmail.com\",\n        \"guests\": 2,\n        \"date\": \"2026-03-18\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"111\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 25,\n        \"created_at\": \"2025-12-18T18:43:11.351119+00:00\",\n        \"name\": \"Test\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2026-03-18\",\n        \"time\": \"14:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"This is test\",\n        \"newsletter\": true,\n        \"status\": \"confirmed\"\n    },\n    {\n        \"id\": 26,\n        \"created_at\": \"2025-12-18T19:03:16.602014+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 27,\n        \"created_at\": \"2025-12-18T19:04:33.996173+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 28,\n        \"created_at\": \"2025-12-18T19:17:07.330853+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 29,\n        \"created_at\": \"2025-12-18T19:18:02.403772+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 30,\n        \"created_at\": \"2025-12-18T19:18:08.963992+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 31,\n        \"created_at\": \"2025-12-18T19:18:44.762272+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 32,\n        \"created_at\": \"2025-12-18T19:20:52.448606+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 33,\n        \"created_at\": \"2025-12-18T19:21:29.002197+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 34,\n        \"created_at\": \"2025-12-18T19:26:15.29417+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 35,\n        \"created_at\": \"2025-12-18T19:28:01.287441+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 36,\n        \"created_at\": \"2025-12-18T19:28:14.069834+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 37,\n        \"created_at\": \"2025-12-18T19:30:24.321184+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 38,\n        \"created_at\": \"2025-12-18T19:30:46.209103+00:00\",\n        \"name\": \"Test\",\n        \"phone\": null,\n        \"email\": null,\n        \"guests\": null,\n        \"date\": null,\n        \"time\": null,\n        \"table_type\": null,\n        \"special_requests\": null,\n        \"newsletter\": null,\n        \"status\": null\n    },\n    {\n        \"id\": 39,\n        \"created_at\": \"2025-12-18T19:35:30.508031+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 40,\n        \"created_at\": \"2025-12-18T19:38:45.832491+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 41,\n        \"created_at\": \"2025-12-18T19:39:48.490828+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 42,\n        \"created_at\": \"2025-12-18T19:42:11.869325+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 43,\n        \"created_at\": \"2025-12-18T19:53:06.620625+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 44,\n        \"created_at\": \"2025-12-18T19:53:35.545566+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 45,\n        \"created_at\": \"2025-12-18T19:53:59.473085+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 46,\n        \"created_at\": \"2025-12-18T19:54:00.537268+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 47,\n        \"created_at\": \"2025-12-18T19:54:01.618866+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    },\n    {\n        \"id\": 48,\n        \"created_at\": \"2025-12-18T19:54:02.590366+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create booking",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Ответ от сервера 201 (создание записи)\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"//Проверка времени ответа (от 10 до 2000 мс)\r",
+							"pm.test(\"Время ответа в диапазоне 10-2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.within(10, 2000);\r",
+							"    });\r",
+							"\r",
+							"// Получаем ID и показываем его\r",
+							"var data = pm.response.json()\r",
+							"pm.test(`Бронь создана. ID: ${data[0].id}`, function() {\r",
+							"    pm.expect(data[0].id).to.exist;\r",
+							"});\r",
+							"\r",
+							"pm.environment.set(\"raw_id\", data[0].id);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Prefer",
+						"value": "return=representation",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test\",\r\n    \"phone\": \"+7 000 000 00 00\",\r\n    \"email\": \"test@test.test\",\r\n    \"guests\": 2,\r\n    \"date\": \"2025-12-10\",\r\n    \"time\": \"22:00:00\",\r\n    \"table_type\": \"standard\",\r\n    \"special_requests\": \"test\",\r\n    \"newsletter\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create booking",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Prefer",
+								"value": "return=representation",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test\",\r\n    \"phone\": \"+7 000 000 00 00\",\r\n    \"email\": \"test@test.test\",\r\n    \"guests\": 2,\r\n    \"date\": \"2025-12-10\",\r\n    \"time\": \"22:00:00\",\r\n    \"table_type\": \"standard\",\r\n    \"special_requests\": \"test\",\r\n    \"newsletter\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}",
+							"host": [
+								"{{base_url}}"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 18 Dec 2025 20:06:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Content-Range",
+							"value": "*/*"
+						},
+						{
+							"key": "CF-Ray",
+							"value": "9b0147563eb618bf-FRA"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "content-profile",
+							"value": "public"
+						},
+						{
+							"key": "preference-applied",
+							"value": "return=representation"
+						},
+						{
+							"key": "sb-gateway-version",
+							"value": "1"
+						},
+						{
+							"key": "sb-project-ref",
+							"value": "efwjeeudmaijarkoadqv"
+						},
+						{
+							"key": "sb-request-id",
+							"value": "019b3311-d1ed-78b4-9941-0c2bf7c8a83e"
+						},
+						{
+							"key": "x-envoy-attempt-count",
+							"value": "1"
+						},
+						{
+							"key": "x-envoy-upstream-service-time",
+							"value": "10"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "__cf_bm=U7OukVsw1pcLTrhXMXkowR42LEOFijj3T1uAH29P41I-1766088364-1.0.1.1-xKRGTNp8NacBmSPxBfKHzMBYA3KCGy8lswq6VAzElMV5AMOcuaSgMpQAXZiMblbedy7pXEDltLS9ExW51HUKf4VrI_dMBcLuIuAhec8oQLo; path=/; expires=Thu, 18-Dec-25 20:36:04 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 51,\n        \"created_at\": \"2025-12-18T20:06:04.539622+00:00\",\n        \"name\": \"Test\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get created booking by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Ответ от сервера 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Проверка времени ответа (от 10 до 2000 мс)\r",
+							"pm.test(\"Время ответа в диапазоне 10-2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.within(10, 2000);\r",
+							"    });\r",
+							"\r",
+							"// Получаем ID и показываем его\r",
+							"var data = pm.response.json()\r",
+							"pm.test(`Бронь присутствует. ID: ${data[0].id}`, function() {\r",
+							"    pm.expect(data[0].id).to.exist;\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Prefer",
+						"value": "return=representation",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}?id=eq.{{raw_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.{{raw_id}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get created booking by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Prefer",
+								"value": "return=representation",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}?id=eq.{{raw_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "eq.{{raw_id}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 18 Dec 2025 20:06:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Content-Range",
+							"value": "0-0/*"
+						},
+						{
+							"key": "CF-Ray",
+							"value": "9b0147b5999d18bf-FRA"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Location",
+							"value": "/bookings?id=eq.51"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "content-profile",
+							"value": "public"
+						},
+						{
+							"key": "sb-gateway-version",
+							"value": "1"
+						},
+						{
+							"key": "sb-project-ref",
+							"value": "efwjeeudmaijarkoadqv"
+						},
+						{
+							"key": "sb-request-id",
+							"value": "019b3312-0d8a-70de-ad18-9ff176d2c87d"
+						},
+						{
+							"key": "x-envoy-attempt-count",
+							"value": "1"
+						},
+						{
+							"key": "x-envoy-upstream-service-time",
+							"value": "8"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "__cf_bm=0EFi3vOiVe_JkFOeIqKgFt4JDIhlb2f.ynCOGFfFcGI-1766088379-1.0.1.1-2ZsVW.fgriozKkj5iD3XZlZfVY9NEJrOHuuEwlkakLHIbkukH2HZRkraYhwqO3QRF1XybOL59OHmsbaHdtWqmkiJxx3aMJkdmA_.HVj7wMU; path=/; expires=Thu, 18-Dec-25 20:36:19 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 51,\n        \"created_at\": \"2025-12-18T20:06:04.539622+00:00\",\n        \"name\": \"Test\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Edit name in booking",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Ответ от сервера 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Проверка времени ответа (от 10 до 2000 мс)\r",
+							"pm.test(\"Время ответа в диапазоне 10-2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.within(10, 2000);\r",
+							"    });\r",
+							"\r",
+							"pm.test(\"Содержит строку 'Example'\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include('Example');\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Prefer",
+						"value": "return=representation",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": {{name_edit}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}?id=eq.{{raw_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.{{raw_id}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Edit name in booking",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Prefer",
+								"value": "return=representation",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": {{name_edit}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}?id=eq.{{raw_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "eq.{{raw_id}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 18 Dec 2025 20:06:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Content-Range",
+							"value": "0-0/*"
+						},
+						{
+							"key": "CF-Ray",
+							"value": "9b0147e5dde018bf-FRA"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "content-profile",
+							"value": "public"
+						},
+						{
+							"key": "preference-applied",
+							"value": "return=representation"
+						},
+						{
+							"key": "sb-gateway-version",
+							"value": "1"
+						},
+						{
+							"key": "sb-project-ref",
+							"value": "efwjeeudmaijarkoadqv"
+						},
+						{
+							"key": "sb-request-id",
+							"value": "019b3312-2bb2-7147-93f3-9b1b088a5fa8"
+						},
+						{
+							"key": "x-envoy-attempt-count",
+							"value": "1"
+						},
+						{
+							"key": "x-envoy-upstream-service-time",
+							"value": "18"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "__cf_bm=a.7_mPTfIjUxq7_UAI_EDclY9MlMhdVpIAimKdKe.ww-1766088387-1.0.1.1-r9uc0VffCoQIZ6RAI1XyyRUeE7ke4RmKC.48PHO8L5cs.WA1pJ_T5YwS889e.i6WkU1gO0.X3sOyxsQv02xjz71j_B8kT40Cj4j1wW24NUk; path=/; expires=Thu, 18-Dec-25 20:36:27 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 51,\n        \"created_at\": \"2025-12-18T20:06:04.539622+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get edited booking by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Ответ от сервера 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Проверка времени ответа (от 10 до 2000 мс)\r",
+							"pm.test(\"Время ответа в диапазоне 10-2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.within(10, 2000);\r",
+							"    });\r",
+							"\r",
+							"// Получаем Имя и показываем его\r",
+							"var data = pm.response.json()\r",
+							"pm.test(`Бронь после редактирования. Имя: ${data[0].name}`, function() {\r",
+							"    pm.expect(data[0].id).to.exist;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Prefer",
+						"value": "return=representation",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}?id=eq.{{raw_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.{{raw_id}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get edited booking by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Prefer",
+								"value": "return=representation",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}?id=eq.{{raw_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "eq.{{raw_id}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 18 Dec 2025 20:06:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Content-Range",
+							"value": "0-0/*"
+						},
+						{
+							"key": "CF-Ray",
+							"value": "9b0148096f7018bf-FRA"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Location",
+							"value": "/bookings?id=eq.51"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "content-profile",
+							"value": "public"
+						},
+						{
+							"key": "sb-gateway-version",
+							"value": "1"
+						},
+						{
+							"key": "sb-project-ref",
+							"value": "efwjeeudmaijarkoadqv"
+						},
+						{
+							"key": "sb-request-id",
+							"value": "019b3312-41f0-7db8-96dd-d2a26160ecc5"
+						},
+						{
+							"key": "x-envoy-attempt-count",
+							"value": "1"
+						},
+						{
+							"key": "x-envoy-upstream-service-time",
+							"value": "10"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "__cf_bm=DFllJDtDBlpwHT.9lRv6gnJAOSqmjmeMKFoyNPa1P1g-1766088393-1.0.1.1-SXgm432xt3uNkzAGWITDZGLaDxGI2C5JjylqMBcxcm337Gp2bkOib1e1OmFTWrj2YsGY0tVF1pWBlkVQY4tSErP.N4Np7MB2HekiB3zKwJs; path=/; expires=Thu, 18-Dec-25 20:36:33 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 51,\n        \"created_at\": \"2025-12-18T20:06:04.539622+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete booking",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Ответ от сервера 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Проверка времени ответа (от 10 до 2000 мс)\r",
+							"pm.test(\"Время ответа в диапазоне 10-2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.within(10, 2000);\r",
+							"    });\r",
+							"\r",
+							"// Получаем ID и показываем его\r",
+							"var data = pm.response.json()\r",
+							"pm.test(`Бронь удалена. ID: ${data[0].id}`, function() {\r",
+							"    pm.expect(data[0].id).to.exist;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+						"type": "text"
+					},
+					{
+						"key": "Prefer",
+						"value": "return=representation",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}?id=eq.{{raw_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.{{raw_id}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get edited booking by ID Copy",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+								"type": "text"
+							},
+							{
+								"key": "Prefer",
+								"value": "return=representation",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}?id=eq.{{raw_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "eq.{{raw_id}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 18 Dec 2025 20:06:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Content-Range",
+							"value": "*/*"
+						},
+						{
+							"key": "CF-Ray",
+							"value": "9b0148270af318bf-FRA"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "content-profile",
+							"value": "public"
+						},
+						{
+							"key": "preference-applied",
+							"value": "return=representation"
+						},
+						{
+							"key": "sb-gateway-version",
+							"value": "1"
+						},
+						{
+							"key": "sb-project-ref",
+							"value": "efwjeeudmaijarkoadqv"
+						},
+						{
+							"key": "sb-request-id",
+							"value": "019b3312-546f-7e3c-a6b2-fbefd5c14eb2"
+						},
+						{
+							"key": "x-envoy-attempt-count",
+							"value": "1"
+						},
+						{
+							"key": "x-envoy-upstream-service-time",
+							"value": "30"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "__cf_bm=Sagml1dgeyGVT6TrzYeVMqZJi2iQNrdQfBrxAq.sqLk-1766088397-1.0.1.1-.ZCuUPun9P7QOAU1TD4izZbUKt_LdUuDr3RpEMuCi3j_5x0Q99mTkoKU0p1i_PdnO4WNVXyhFKZXUDEIKyS3z5edOYziyoRk2X7m6x5l2XE; path=/; expires=Thu, 18-Dec-25 20:36:37 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 51,\n        \"created_at\": \"2025-12-18T20:06:04.539622+00:00\",\n        \"name\": \"Example\",\n        \"phone\": \"+7 000 000 00 00\",\n        \"email\": \"test@test.test\",\n        \"guests\": 2,\n        \"date\": \"2025-12-10\",\n        \"time\": \"22:00:00\",\n        \"table_type\": \"standard\",\n        \"special_requests\": \"test\",\n        \"newsletter\": false,\n        \"status\": null\n    }\n]"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "sb_secret_J1ChIFv5wnJ5Tx-GjweKsQ_cuGDWPaB",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "default",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
